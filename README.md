@@ -1,21 +1,8 @@
-# my-vue
+# 哑铃健身计划
 
-> first demo
+- 适合程序员的颈椎病康复指南
 
-## Build Setup
+- 本地打开html页面即可
 
-``` bash
-# install dependencies
-npm install
+- 根据星期几自动切换当日的训练gif
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
