@@ -45,7 +45,7 @@
        width="980" bordercolor="#999999">
     <tbody align="center">
     <tr>
-        <td rowspan="7" valign="center" width="29" class="mon">周一</td>
+        <td rowspan="7" valign="center" width="29" class="week mon">周一</td>
         <td valign="center" width="45">部位</td>
         <td valign="center" width="90">动作名称</td>
         <td valign="center" width="45">组数</td>
@@ -67,7 +67,7 @@
                 style="color: rgb(0, 0, 0);">推举</a></span></td>
         <td valign="center" width="45">4</td>
         <td valign="center" width="52">8～12</td>
-        <td rowspan="5" valign="center" width="29" class="wed">周三</td>
+        <td rowspan="5" valign="center" width="29" class="week wed">周三</td>
         <td rowspan="3" valign="center" width="75"><span class="wp_keywordlink"
                                                          style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
                 href="http://www.jianshen8.com/jirou/beibu/" title="背部" target="_blank"
@@ -157,7 +157,7 @@
         <td valign="center" width="51">&nbsp;</td>
     </tr>
     <tr>
-        <td rowspan="6" valign="center" width="29" class="fri">周五</td>
+        <td rowspan="6" valign="center" width="29" class="week fri">周五</td>
         <td rowspan="3" valign="center" width="45"><span class="wp_keywordlink"
                                                          style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
                 href="http://www.jianshen8.com/jirou/xiongbu/" title="胸部" target="_blank" style="color: rgb(0, 0, 0);">胸部</a></span>
@@ -168,7 +168,7 @@
                 style="color: rgb(0, 0, 0);">上斜推举</a></span></td>
         <td valign="center" width="45">3</td>
         <td valign="center" width="52">12</td>
-        <td rowspan="6" valign="center" width="29" class="sun">周日</td>
+        <td rowspan="6" valign="center" width="29" class="week sun">周日</td>
         <td rowspan="3" valign="center" width="75"><span class="wp_keywordlink"
                                                          style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
                 href="http://www.jianshen8.com/jirou/tuibu/" title="大腿肌肉锻炼" target="_blank"
@@ -285,40 +285,57 @@
     <img src="images/25.gif" alt="">
     <img src="images/26.gif" alt="">
 </div>
+<div class="gifImg leg" style="display: none">
+    <img src="images/2.jpg" alt="" style="width: 200px;">
+    <img src="images/3.jpg" alt="" style="width: 200px;">
+    <img src="images/27.gif" alt="" style="width: 200px;">
+    <img src="images/28.gif" alt="">
+    <img src="images/29.gif" alt="">
+    <img src="images/30.gif" alt="">
+    <img src="images/31.gif" alt="">
+</div>
 </body>
 <script>
-    var mon = document.querySelector(".mon");
-    var wed = document.querySelector(".wed");
-    var fri = document.querySelector(".fri");
-    var sun = document.querySelector(".sun");
-    var gifImg = document.querySelectorAll(".gifImg");
-    var date = new Date().getDay();
 
-    console.log(date);
-    wed.addEventListener("click", changeGif)
-    mon.addEventListener("click", changeGif)
-    fri.addEventListener("click", changeGif);
-    function changeGif() {
-        const name = this.className
+    bindEveryDay(["mon","wed","fri","sun"])
+    function bindEveryDay(day){
+        for(let i= 0,l=day.length;i<l;i++){
+            const someDay =  document.querySelector("." +  day[i]);
+            someDay.addEventListener("click", changeGif)
+        }
+    }
+    function changeGif(e,day) {
+//        console.log(this.classList);
+        const name = day ||this.classList[1]
+        const gifImg = document.querySelectorAll(".gifImg");
+        const week = document.querySelectorAll(".week");
         for (let i = 0, l = gifImg.length; i < l; i++) {
             gifImg[i].style.display = "none";
+            week[i].style.background = "";
         }
         if (name == "mon") {
             document.querySelector(".shoulder").style.display = "block";
+            document.querySelector(".mon").style.background = "hotpink";
         } else if (name == "wed") {
             document.querySelector(".abdomen").style.display = "block";
+            document.querySelector(".wed").style.background = "hotpink";
+
         } else if (name == "fri") {
             document.querySelector(".chest").style.display = "block";
+            document.querySelector(".fri").style.background = "hotpink";
+        }else if (name == "sun") {
+            document.querySelector(".leg").style.display = "block";
+            document.querySelector(".sun").style.background = "hotpink";
         }
     }
     //根据周几自动显示当天gif
+    const date = new Date().getDay();
     if (date == 2 || date == 3) {
-        wed.click();
-        wed.style.background = "hotpink"
+        changeGif("","wed")
     } else if (date == 4 || date == 5) {
-        fri.click();
+        changeGif("","fri")
     }else if (date == 0 || date == 1) {
-        mon.click();
+        changeGif("","sun")
     }
 </script>
 </html>
