@@ -1,4 +1,4 @@
-<img src="./images/4.jpg" alt="">
+<img src="./images/23.gif" alt="">
 
 # 哑铃健身计划
 
