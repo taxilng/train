@@ -1,4 +1,4 @@
-<a><img src="./images/20.gif" alt=""></a>
+<a href='javascript:void(0)'><img src="./images/20.gif" style="width:200px;"></a>
 
 # 哑铃健身计划
 
