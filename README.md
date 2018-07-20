@@ -12,3 +12,5 @@
 # 肩周炎恢复
 
 - 点击图片颜色变灰，表示完成任务
+
+https://taxilng.github.io/train/recover
