@@ -1,46 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>肩周炎康复训练</title>
-    <style>
-        img {
-            height: 400px;
-        }
-
-        .gray {
-            -webkit-filter: grayscale(100%);
-            -moz-filter: grayscale(100%);
-            -ms-filter: grayscale(100%);
-            -o-filter: grayscale(100%);
-            filter: grayscale(100%);
-            filter: gray;
-            opacity: 0.7
-        }
-    </style>
-</head>
-<body>
-<img src="./images/4.jpg" alt="">
-<img src="./images/6.jpg" alt="">
-<img src="./images/7.jpg" alt="">
-<img src="./images/8.jpg" alt="">
-<img src="./images/9.jpg" alt="">
-<img src="./images/10.jpg" alt="">
-<img src="./images/11.jpg" alt="">
-<img src="./images/12.jpg" alt="">
-<img src="./images/13.jpg" alt="">
-</body>
-<script>
-    const img = document.querySelectorAll('img');
-    for (let i = 0; i < img.length; i++) {
-        img[i].addEventListener('click',(e) =>{
-            if(e.target.className !== 'gray'){
-                e.target.className = 'gray'
-            }else{
-                e.target.className = ''
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>肩周炎康复训练</title>
+        <link rel="stylesheet" href="./base.css" />
+        <style>
+            .content2 {
+                display: flex;
+                flex-wrap: wrap;
+                /* justify-content: space-around; */
+            }
+            .content2 li {
+                width: 25%;
+                padding: 20px;
+            }
+            .content2 li:last-child {
+                width: 50%;
+            }
+            @media screen and (min-width: 1000px) {
+                img {
+                    height: 400px;
+                }
+            }
+            @media screen and (max-width: 800px) {
+                .content2 li{
+                    width: 100%;
+                    padding: 0px;
+                }
+                img {
+                    max-width: 100%;
+                }
+                .content1 img{
+                    width: 49%;
+                }
             }
 
-        })
-    }
-</script>
+            .gray {
+                -webkit-filter: grayscale(100%);
+                -moz-filter: grayscale(100%);
+                -ms-filter: grayscale(100%);
+                -o-filter: grayscale(100%);
+                filter: grayscale(100%);
+                filter: gray;
+                opacity: 0.7;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>肩周炎2.0版本</h1>
+        <ul class="content2">
+            <li>
+                <h2>1.手指爬墙</h2>
+                <p>
+                    面墙而立，双手扶墙，手指顺转爬行而上，练习上举，观察哪侧严重，并记录下每日达到最大高度。每日2次，每次30次以上。
+                </p>
+                <div>
+                    <img src="./images/jzy2/1.gif" />
+                </div>
+            </li>
+            <li>
+                <h2>2.直臂外展</h2>
+                <p>
+                    面壁直立，双臂下垂，直臂向两侧外展，记录每日抬高的最大角度。上午，下午各一回，每次运动30次以上。
+                </p>
+                <div>
+                    <img src="./images/jzy2/2.gif" />
+                </div>
+            </li>
+            <li>
+                <h2>3.交叉拍肩</h2>
+                <p>
+                    双臂在胸前交叉甩动，双手拍对侧肩头，双臂上下交替进行，每次拍打30次以上，每日练2回。<br />
+                </p>
+                <div>
+                    <img src="./images/jzy2/3.gif" />
+                </div>
+            </li>
+            <li>
+                <h2>4.拍背打背</h2>
+                <p>
+                    双臂轮番前后甩动，左臂向右前方运动
+                    ，拍打右肩，右臂向左后方运动，拍打左背，左右交替进行30次以上，每日2回。
+                </p>
+                <div>
+                    <img src="./images/jzy2/4.gif" />
+                </div>
+            </li>
+            <li>
+                <h2>5.后身摸背</h2>
+                <p>两臂后伸，以健侧手腕部，使患侧手指尽量向上摸脊背。</p>
+                <div>
+                    <img src="./images/jzy2/5.gif" />
+                </div>
+            </li>
+            <li>
+                <h2>6.旋臂运动</h2>
+                <p>
+                    一手叉腰，另一臂左旋转运动，先顺时针旋转30次，在逆时针旋转30次，换对侧做同样运动，旋转弧度越大越好!<br />
+                </p>
+                <div>
+                    <img src="./images/jzy2/6.gif" />
+                </div>
+            </li>
+            <li>
+                <h2>7.手持体操棒上举、后伸</h2>
+                <p>
+                    立位，双手持体操棒，做两直臂同时上举、后伸练习，健侧带动患侧，到感觉疼痛处停止，保持5秒，放下。
+                </p>
+                <div>
+                    <img src="./images/jzy2/7.gif" />
+                    <img src="./images/jzy2/8.gif" />
+                </div>
+            </li>
+        </ul>
+        <h1 style="margin-bottom: 20px;">肩周炎1.0版本</h1>
+        <div class="content1">
+            <img src="./images/4.jpg" alt="" />
+            <img src="./images/6.jpg" alt="" />
+            <img src="./images/7.jpg" alt="" />
+            <img src="./images/8.jpg" alt="" />
+            <img src="./images/9.jpg" alt="" />
+            <img src="./images/10.jpg" alt="" />
+            <img src="./images/11.jpg" alt="" />
+            <img src="./images/12.jpg" alt="" />
+            <img src="./images/13.jpg" alt="" />
+        </div>
+    </body>
+    <script>
+        const img = document.querySelectorAll('img')
+        for (let i = 0; i < img.length; i++) {
+            img[i].addEventListener('click', (e) => {
+                if (e.target.className !== 'gray') {
+                    e.target.className = 'gray'
+                } else {
+                    e.target.className = ''
+                }
+            })
+        }
+    </script>
 </html>
