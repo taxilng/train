@@ -3,6 +3,8 @@
 
 # 哑铃健身计划
 
+https://taxilng.github.io/train/
+
 - 适合程序员的颈椎病康复指南
 
 - 本地打开html页面即可
@@ -12,5 +14,7 @@
 # 肩周炎恢复
 
 - 点击图片颜色变灰，表示完成任务
+- 升级到2.0版本了，又多了8个动作
+- 支持移动端了
 
 https://taxilng.github.io/train/recover
