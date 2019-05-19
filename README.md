@@ -18,3 +18,6 @@ https://taxilng.github.io/train/
 - 支持移动端了
 
 https://taxilng.github.io/train/recover
+
+#腰肌劳损
+https://taxilng.github.io/train/LumbarMuscleStrain
