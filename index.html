@@ -1,341 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>哑铃健身程序员版</title>
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-        }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
 
-        .gifImg {
-            margin: 20px auto;
-        }
+      .gifImg {
+        margin: 20px auto;
+      }
 
-        img {
-            float: left;
-            max-width: 300px;
-            max-height: 335px;
-            border: 1px dashed #eee;
-            border-right: none;
-        }
+      img {
+        float: left;
+        max-width: 300px;
+        max-height: 335px;
+        border: 1px dashed #eee;
+        border-right: none;
+      }
 
-        table {
-            border-collapse: collapse;
-        }
+      table {
+        border-collapse: collapse;
+      }
 
-        img:last-child {
-            border-right: 1px dashed #eee;
-        }
+      img:last-child {
+        border-right: 1px dashed #eee;
+      }
 
-        .mon, .wed, .fri, .sun {
-            cursor: pointer;
-        }
+      .mon,
+      .wed,
+      .fri,
+      .sun {
+        cursor: pointer;
+      }
 
-        a {
-            color: #000000;
-            text-decoration: none;
-        }
+      a {
+        /* color: #000000; */
+        text-decoration: none;
+        border: 1px solid #eee;
+      }
+      .btn {
+        display: inline-block;
+        margin-bottom: 20px;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid transparent;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        border-radius: 4px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .btn-primary {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+      }
+      .btn-success {
+        color: #fff;
+        background-color: #5cb85c;
+        border-color: #4cae4c;
+      }
+      .btn-info {
+        color: #fff;
+        background-color: #5bc0de;
+        border-color: #46b8da;
+      }
+      .btn-warning {
+        color: #fff;
+        background-color: #f0ad4e;
+        border-color: #eea236;
+      }
+      .btn-danger {
+        color: #fff;
+        background-color: #d9534f;
+        border-color: #d43f3a;
+      }
     </style>
-</head>
-<body>
-<table border="1" align="center"
-       style="color: rgb(0, 0, 0); font-family: 'Microsoft YaHei', 微软雅黑, Arial, 'Lucida Grande', Tahoma, sans-serif; font-size: 14px; line-height: 25px;"
-       width="980" bordercolor="#999999">
-    <tbody align="center">
-    <tr>
-        <td rowspan="7" valign="center" width="29" class="week mon">周一</td>
-        <td valign="center" width="45">部位</td>
-        <td valign="center" width="90">动作名称</td>
-        <td valign="center" width="45">组数</td>
-        <td valign="center" width="52">次数</td>
-        <td valign="center" width="29">&nbsp;</td>
-        <td valign="center" width="75">部位</td>
-        <td valign="center" width="102">动作名称</td>
-        <td valign="center" width="43">组数</td>
-        <td valign="center" width="51">次数</td>
-    </tr>
-    <tr>
-        <td rowspan="4" valign="center" width="45"><span class="wp_keywordlink"
-                                                         style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jirou/jianbu/" title="肩部" target="_blank"
-                style="color: rgb(0, 0, 0);">肩部</a></span></td>
-        <td valign="center" width="90"><span class="wp_keywordlink"
-                                             style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jihua/yaling/3742.html" title="推举" target="_blank"
-                style="color: rgb(0, 0, 0);">推举</a></span></td>
-        <td valign="center" width="45">4</td>
-        <td valign="center" width="52">8～12</td>
-        <td rowspan="5" valign="center" width="29" class="week wed">周三</td>
-        <td rowspan="3" valign="center" width="75"><span class="wp_keywordlink"
-                                                         style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jirou/beibu/" title="背部" target="_blank"
-                style="color: rgb(0, 0, 0);">背部</a></span></td>
-        <td valign="center" width="102"><span class="wp_keywordlink"
-                                              style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jihua/yaling/3029.html" title="俯身双臂划船" target="_blank"
-                style="color: rgb(0, 0, 0);">俯身双臂划船</a></span></td>
-        <td valign="center" width="43">4</td>
-        <td valign="center" width="51">8～12</td>
-    </tr>
-    <tr>
-        <td valign="center" width="90"><span class="wp_keywordlink"
-                                             style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jihua/yaling/3744.html" title="侧平举" target="_blank"
-                style="color: rgb(0, 0, 0);">侧平举</a></span></td>
-        <td valign="center" width="45">3</td>
-        <td valign="center" width="52">8</td>
-        <td valign="center" width="102"><span class="wp_keywordlink"
-                                              style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jihua/yaling/3760.html" title="俯身单臂划船" target="_blank"
-                style="color: rgb(0, 0, 0);">俯身单臂划船</a></span></td>
-        <td valign="center" width="43">4</td>
-        <td valign="center" width="51">10</td>
-    </tr>
-    <tr>
-        <td valign="center" width="90"><span class="wp_keywordlink"
-                                             style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jihua/yaling/3745.html" title="俯身侧平举" target="_blank"
-                style="color: rgb(0, 0, 0);">俯身侧平举</a></span></td>
-        <td valign="center" width="45">3</td>
-        <td valign="center" width="52">10</td>
-        <td valign="center" width="102"><span class="wp_keywordlink"
-                                              style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jihua/zengji/2449.html" title="直腿硬拉" target="_blank"
-                style="color: rgb(0, 0, 0);">直腿硬拉</a></span></td>
-        <td valign="center" width="43">3</td>
-        <td valign="center" width="51">12</td>
-    </tr>
-    <tr>
-        <td valign="center" width="90"><span class="wp_keywordlink"
-                                             style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jihua/yaling/3747.html" title="耸肩,锻炼斜方肌、及颈肌、上背肌群动作" target="_blank"
-                style="color: rgb(0, 0, 0);">耸肩</a></span></td>
-        <td valign="center" width="45">4</td>
-        <td valign="center" width="52">10</td>
-        <td rowspan="2" valign="center" width="75"><span class="wp_keywordlink"
-                                                         style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jirou/yaofubu/" title="腹部" target="_blank" style="color: rgb(0, 0, 0);">腹部</a></span>
-        </td>
-        <td valign="center" width="102"><span class="wp_keywordlink"
-                                              style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jirou/tuibu/223.html" title="仰卧举腿" target="_blank"
-                >仰卧举腿</a></span></td>
-        <td valign="center" width="43">3</td>
-        <td valign="center" width="51">15</td>
-    </tr>
-    <tr>
-        <td rowspan="2" valign="center" width="45"><span class="wp_keywordlink"
-                                                         style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jirou/shangzhi/" title="肱三头肌" target="_blank"
-                style="color: rgb(0, 0, 0);">肱三头肌</a></span></td>
-        <td valign="center" width="90"><span class="wp_keywordlink"
-                                             style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jihua/yaling/3755.html" title="颈后臂屈伸" target="_blank"
-                style="color: rgb(0, 0, 0);">颈后臂屈伸</a></span></td>
-        <td valign="center" width="45">4</td>
-        <td valign="center" width="52">8～12</td>
-        <td valign="center" width="102"><span class="wp_keywordlink"
-                                              style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jirou/yaofubu/1606.html" title="仰卧起坐的正确做法大全，减肥减掉小肚子！" target="_blank"
-                style="color: rgb(0, 0, 0);">仰卧起坐</a></span></td>
-        <td valign="center" width="43">3</td>
-        <td valign="center" width="51">15</td>
-    </tr>
-    <tr>
-        <td valign="center" width="90">俯身<span class="wp_keywordlink"
-                                               style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jihua/yaling/3753.html" title="臂屈伸" target="_blank"
-                style="color: rgb(0, 0, 0);">臂屈伸</a></span></td>
-        <td valign="center" width="45">4</td>
-        <td valign="center" width="52">12</td>
-        <td valign="center" width="29">&nbsp;</td>
-        <td valign="center" width="75">&nbsp;</td>
-        <td valign="center" width="102">&nbsp;</td>
-        <td valign="center" width="43">&nbsp;</td>
-        <td valign="center" width="51">&nbsp;</td>
-    </tr>
-    <tr>
-        <td rowspan="6" valign="center" width="29" class="week fri">周五</td>
-        <td rowspan="3" valign="center" width="45"><span class="wp_keywordlink"
-                                                         style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jirou/xiongbu/" title="胸部" target="_blank" style="color: rgb(0, 0, 0);">胸部</a></span>
-        </td>
-        <td valign="center" width="90"><span class="wp_keywordlink"
-                                             style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/xiangmu/yaling/682.html" title="上斜推举" target="_blank"
-                style="color: rgb(0, 0, 0);">上斜推举</a></span></td>
-        <td valign="center" width="45">3</td>
-        <td valign="center" width="52">12</td>
-        <td rowspan="6" valign="center" width="29" class="week sun">周日</td>
-        <td rowspan="3" valign="center" width="75"><span class="wp_keywordlink"
-                                                         style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jirou/tuibu/" title="大腿肌肉锻炼" target="_blank"
-                style="color: rgb(0, 0, 0);">大腿</a></span></td>
-        <td valign="center" width="102"><span class="wp_keywordlink"
-                                              style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jihua/yaling/2155.html" title="深蹲" target="_blank"
-                style="color: rgb(0, 0, 0);">深蹲</a></span></td>
-        <td valign="center" width="43">5</td>
+  </head>
+  <body>
+    <header style="margin: 20px 10px; font-size: 20px">
+      <a target="_blank" class="btn btn-primary" style="margin-right: 10px" href="./LumbarMuscleStrain.html">腰肌劳损</a>
+      <a target="_blank" class="btn btn-success" href="./recover.html">肩周炎</a>
+      <a target="_blank" class="btn btn-info" href="./healthExercises.html">健康操</a>
+      <a target="_blank" class="btn btn-warning" href="https://www.bilibili.com/video/BV1B7411B7Ht?share_source=copy_web&vd_source=83fbfbd196967ca72408caddf9162cfd&t=77">蜜桃臀</a>
+      <a target="_blank" class="btn btn-danger" href="https://www.bilibili.com/video/BV1JU4y1Z7KR?share_source=copy_web&vd_source=83fbfbd196967ca72408caddf9162cfd&t=47">跪姿俯卧撑</a>
+      <a target="_blank" class="btn btn-primary" href="https://www.douyin.com/video/7165290369473596703">腰腹两侧</a>
+    </header>
+    <table border="1" align="center" style="color: rgb(0, 0, 0); font-family: 'Microsoft YaHei', 微软雅黑, Arial, 'Lucida Grande', Tahoma, sans-serif; font-size: 14px; line-height: 25px" width="980" bordercolor="#999999">
+      <tbody align="center">
+        <tr>
+          <td rowspan="7" valign="center" width="29" class="week mon">周一</td>
+          <td valign="center" width="45">部位</td>
+          <td valign="center" width="90">动作名称</td>
+          <td valign="center" width="45">组数</td>
+          <td valign="center" width="52">次数</td>
+          <td valign="center" width="29">&nbsp;</td>
+          <td valign="center" width="75">部位</td>
+          <td valign="center" width="102">动作名称</td>
+          <td valign="center" width="43">组数</td>
+          <td valign="center" width="51">次数</td>
+        </tr>
+        <tr>
+          <td rowspan="4" valign="center" width="45">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jirou/jianbu/" title="肩部" target="_blank" style="color: rgb(0, 0, 0)">肩部</a></span>
+          </td>
+          <td valign="center" width="90">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jihua/yaling/3742.html" title="推举" target="_blank" style="color: rgb(0, 0, 0)">推举</a></span>
+          </td>
+          <td valign="center" width="45">4</td>
+          <td valign="center" width="52">8～12</td>
+          <td rowspan="5" valign="center" width="29" class="week wed">周三</td>
+          <td rowspan="3" valign="center" width="75">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jirou/beibu/" title="背部" target="_blank" style="color: rgb(0, 0, 0)">背部</a></span>
+          </td>
+          <td valign="center" width="102">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jihua/yaling/3029.html" title="俯身双臂划船" target="_blank" style="color: rgb(0, 0, 0)">俯身双臂划船</a></span>
+          </td>
+          <td valign="center" width="43">4</td>
+          <td valign="center" width="51">8～12</td>
+        </tr>
+        <tr>
+          <td valign="center" width="90">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jihua/yaling/3744.html" title="侧平举" target="_blank" style="color: rgb(0, 0, 0)">侧平举</a></span>
+          </td>
+          <td valign="center" width="45">3</td>
+          <td valign="center" width="52">8</td>
+          <td valign="center" width="102">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jihua/yaling/3760.html" title="俯身单臂划船" target="_blank" style="color: rgb(0, 0, 0)">俯身单臂划船</a></span>
+          </td>
+          <td valign="center" width="43">4</td>
+          <td valign="center" width="51">10</td>
+        </tr>
+        <tr>
+          <td valign="center" width="90">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jihua/yaling/3745.html" title="俯身侧平举" target="_blank" style="color: rgb(0, 0, 0)">俯身侧平举</a></span>
+          </td>
+          <td valign="center" width="45">3</td>
+          <td valign="center" width="52">10</td>
+          <td valign="center" width="102">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jihua/zengji/2449.html" title="直腿硬拉" target="_blank" style="color: rgb(0, 0, 0)">直腿硬拉</a></span>
+          </td>
+          <td valign="center" width="43">3</td>
+          <td valign="center" width="51">12</td>
+        </tr>
+        <tr>
+          <td valign="center" width="90">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jihua/yaling/3747.html" title="耸肩,锻炼斜方肌、及颈肌、上背肌群动作" target="_blank" style="color: rgb(0, 0, 0)">耸肩</a></span>
+          </td>
+          <td valign="center" width="45">4</td>
+          <td valign="center" width="52">10</td>
+          <td rowspan="2" valign="center" width="75">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jirou/yaofubu/" title="腹部" target="_blank" style="color: rgb(0, 0, 0)">腹部</a></span>
+          </td>
+          <td valign="center" width="102">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jirou/tuibu/223.html" title="仰卧举腿" target="_blank">仰卧举腿</a></span>
+          </td>
+          <td valign="center" width="43">3</td>
+          <td valign="center" width="51">15</td>
+        </tr>
+        <tr>
+          <td rowspan="2" valign="center" width="45">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jirou/shangzhi/" title="肱三头肌" target="_blank" style="color: rgb(0, 0, 0)">肱三头肌</a></span>
+          </td>
+          <td valign="center" width="90">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jihua/yaling/3755.html" title="颈后臂屈伸" target="_blank" style="color: rgb(0, 0, 0)">颈后臂屈伸</a></span>
+          </td>
+          <td valign="center" width="45">4</td>
+          <td valign="center" width="52">8～12</td>
+          <td valign="center" width="102">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jirou/yaofubu/1606.html" title="仰卧起坐的正确做法大全，减肥减掉小肚子！" target="_blank" style="color: rgb(0, 0, 0)">仰卧起坐</a></span>
+          </td>
+          <td valign="center" width="43">3</td>
+          <td valign="center" width="51">15</td>
+        </tr>
+        <tr>
+          <td valign="center" width="90">
+            俯身<span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jihua/yaling/3753.html" title="臂屈伸" target="_blank" style="color: rgb(0, 0, 0)">臂屈伸</a></span>
+          </td>
+          <td valign="center" width="45">4</td>
+          <td valign="center" width="52">12</td>
+          <td valign="center" width="29">&nbsp;</td>
+          <td valign="center" width="75">&nbsp;</td>
+          <td valign="center" width="102">&nbsp;</td>
+          <td valign="center" width="43">&nbsp;</td>
+          <td valign="center" width="51">&nbsp;</td>
+        </tr>
+        <tr>
+          <td rowspan="6" valign="center" width="29" class="week fri">周五</td>
+          <td rowspan="3" valign="center" width="45">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jirou/xiongbu/" title="胸部" target="_blank" style="color: rgb(0, 0, 0)">胸部</a></span>
+          </td>
+          <td valign="center" width="90">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/xiangmu/yaling/682.html" title="上斜推举" target="_blank" style="color: rgb(0, 0, 0)">上斜推举</a></span>
+          </td>
+          <td valign="center" width="45">3</td>
+          <td valign="center" width="52">12</td>
+          <td rowspan="6" valign="center" width="29" class="week sun">周日</td>
+          <td rowspan="3" valign="center" width="75">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jirou/tuibu/" title="大腿肌肉锻炼" target="_blank" style="color: rgb(0, 0, 0)">大腿</a></span>
+          </td>
+          <td valign="center" width="102">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jihua/yaling/2155.html" title="深蹲" target="_blank" style="color: rgb(0, 0, 0)">深蹲</a></span>
+          </td>
+          <td valign="center" width="43">5</td>
 
-        <td valign="center" width="51">8～12</td>
-    </tr>
-    <tr>
-        <td valign="center" width="90"><span class="wp_keywordlink"
-                                             style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jihua/yaling/3748.html" title="平卧推举" target="_blank"
-                style="color: rgb(0, 0, 0);">平卧推举</a></span></td>
-        <td valign="center" width="45">4</td>
-        <td valign="center" width="52">10</td>
-        <td valign="center" width="102"><span class="wp_keywordlink"
-                                              style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jihua/yaling/2357.html" title="箭步蹲" target="_blank"
-                style="color: rgb(0, 0, 0);">箭步蹲</a></span></td>
-        <td valign="center" width="43">3</td>
-        <td valign="center" width="51">12</td>
-    </tr>
-    <tr>
-        <td valign="center" width="90"><span class="wp_keywordlink"
-                                             style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jihua/yaling/3749.html" title="平卧飞鸟" target="_blank"
-                style="color: rgb(0, 0, 0);">平卧飞鸟</a></span></td>
-        <td valign="center" width="45">3</td>
-        <td valign="center" width="52">12</td>
-        <td valign="center" width="102"><span class="wp_keywordlink"
-                                              style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jirou/tuibu/3774.html" title="俯卧腿弯举" target="_blank"
-                style="color: rgb(0, 0, 0);">俯卧腿弯举</a></span></td>
-        <td valign="center" width="43">3</td>
-        <td valign="center" width="51">12</td>
-    </tr>
-    <tr>
-        <td rowspan="3" valign="center" width="45"><span class="wp_keywordlink"
-                                                         style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jirou/shangzhi/" title="肱二头肌锻炼方法" target="_blank"
-                style="color: rgb(0, 0, 0);">肱二头肌</a></span></td>
-        <td valign="center" width="90"><span class="wp_keywordlink"
-                                             style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jihua/yaling/3773.html" title="交替弯举" target="_blank"
-                style="color: rgb(0, 0, 0);">交替弯举</a></span></td>
-        <td valign="center" width="45">3</td>
-        <td valign="center" width="52">12</td>
-        <td valign="center" width="75"><span class="wp_keywordlink"
-                                             style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jirou/tuibu/" title="小腿肌肉锻炼" target="_blank"
-                style="color: rgb(0, 0, 0);">小腿</a></span></td>
-        <td valign="center" width="102"><span class="wp_keywordlink"
-                                              style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jirou/tuibu/1604.html" title="站立提踵" target="_blank"
-                style="color: rgb(0, 0, 0);">站立提踵</a></span></td>
-        <td valign="center" width="43">5</td>
-        <td valign="center" width="51">15</td>
-    </tr>
-    <tr>
-        <td valign="center" width="90">双手哑铃弯举</td>
-        <td valign="center" width="45">3</td>
-        <td valign="center" width="52">12</td>
-        <td rowspan="2" valign="center" width="75"><span class="wp_keywordlink"
-                                                         style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jirou/yaofubu/" title="腹部" target="_blank" style="color: rgb(0, 0, 0);">腹部</a></span>
-        </td>
-        <td valign="center" width="102"><a href="http://www.jianshen8.com/jirou/tuibu/223.html" target="_blank">仰卧举腿</a>
-        </td>
-        <td valign="center" width="43">3</td>
-        <td valign="center" width="51">15</td>
-    </tr>
-    <tr>
-        <td valign="center" width="90">哑铃坐姿弯举</td>
-        <td valign="center" width="45">3</td>
-        <td valign="center" width="52">12</td>
-        <td valign="center" width="102"><span class="wp_keywordlink"
-                                              style="margin: 0px; padding: 0px; border: 0px; background-color: transparent;"><a
-                href="http://www.jianshen8.com/jirou/yaofubu/1606.html" title="仰卧起坐的正确做法大全，减肥减掉小肚子！" target="_blank"
-                style="color: rgb(0, 0, 0);">仰卧起坐</a></span></td>
-        <td valign="center" width="43">3</td>
-        <td valign="center" width="51">15</td>
-    </tr>
-    </tbody>
-</table>
-<div class="gifImg shoulder">
-    <img src="images/1.gif" alt="">
-    <img src="images/2.gif" alt="">
-    <img src="images/3.gif" alt="">
-    <img src="images/4.gif" alt="">
-    <img src="images/5.gif" alt="">
-    <img src="images/6.gif" alt="">
-</div>
-<div class="gifImg abdomen" style="display: none">
-    <img src="images/7.gif" alt="">
-    <img src="images/8.gif" alt="" style="height: 280px">
-    <img src="images/9.gif" alt="">
-    <img src="images/11.gif" alt="">
-    <img src="images/12.gif" alt="">
-    <img src="images/14.gif" alt="">
-    <img src="images/16.gif" alt="">
-    <img src="images/18.gif" alt="">
-    <img src="images/19.gif" alt="">
-</div>
-<div class="gifImg chest" style="display: none">
-    <img src="images/20.gif" alt="" style="width: 200px;">
-    <img src="images/21.gif" alt="">
-    <img src="images/22.gif" alt="">
-    <img src="images/23.gif" alt="">
-    <img src="images/24.gif" alt="">
-    <img src="images/25.gif" alt="">
-    <img src="images/26.gif" alt="">
-</div>
-<div class="gifImg leg" style="display: none">
-    <img src="images/2.jpg" alt="" style="width: 200px;">
-    <img src="images/3.jpg" alt="" style="width: 200px;">
-    <img src="images/27.gif" alt="" style="width: 200px;">
-    <img src="images/28.gif" alt="" style="max-width: 500px;">
-    <img src="images/29.gif" alt="" style="max-width: 500px;">
-    <img src="images/30.gif" alt="" style="max-width: 500px;">
-    <img src="images/31.gif" alt="" style="max-width: 500px;">
-</div>
-</body>
-<script>
-
-    bindEveryDay(["mon","wed","fri","sun"])
-    function bindEveryDay(day){
-        for(let i= 0,l=day.length;i<l;i++){
-            const someDay =  document.querySelector("." +  day[i]);
-            someDay.addEventListener("click", changeGif)
-        }
+          <td valign="center" width="51">8～12</td>
+        </tr>
+        <tr>
+          <td valign="center" width="90">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jihua/yaling/3748.html" title="平卧推举" target="_blank" style="color: rgb(0, 0, 0)">平卧推举</a></span>
+          </td>
+          <td valign="center" width="45">4</td>
+          <td valign="center" width="52">10</td>
+          <td valign="center" width="102">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jihua/yaling/2357.html" title="箭步蹲" target="_blank" style="color: rgb(0, 0, 0)">箭步蹲</a></span>
+          </td>
+          <td valign="center" width="43">3</td>
+          <td valign="center" width="51">12</td>
+        </tr>
+        <tr>
+          <td valign="center" width="90">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jihua/yaling/3749.html" title="平卧飞鸟" target="_blank" style="color: rgb(0, 0, 0)">平卧飞鸟</a></span>
+          </td>
+          <td valign="center" width="45">3</td>
+          <td valign="center" width="52">12</td>
+          <td valign="center" width="102">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jirou/tuibu/3774.html" title="俯卧腿弯举" target="_blank" style="color: rgb(0, 0, 0)">俯卧腿弯举</a></span>
+          </td>
+          <td valign="center" width="43">3</td>
+          <td valign="center" width="51">12</td>
+        </tr>
+        <tr>
+          <td rowspan="3" valign="center" width="45">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jirou/shangzhi/" title="肱二头肌锻炼方法" target="_blank" style="color: rgb(0, 0, 0)">肱二头肌</a></span>
+          </td>
+          <td valign="center" width="90">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jihua/yaling/3773.html" title="交替弯举" target="_blank" style="color: rgb(0, 0, 0)">交替弯举</a></span>
+          </td>
+          <td valign="center" width="45">3</td>
+          <td valign="center" width="52">12</td>
+          <td valign="center" width="75">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jirou/tuibu/" title="小腿肌肉锻炼" target="_blank" style="color: rgb(0, 0, 0)">小腿</a></span>
+          </td>
+          <td valign="center" width="102">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jirou/tuibu/1604.html" title="站立提踵" target="_blank" style="color: rgb(0, 0, 0)">站立提踵</a></span>
+          </td>
+          <td valign="center" width="43">5</td>
+          <td valign="center" width="51">15</td>
+        </tr>
+        <tr>
+          <td valign="center" width="90">双手哑铃弯举</td>
+          <td valign="center" width="45">3</td>
+          <td valign="center" width="52">12</td>
+          <td rowspan="2" valign="center" width="75">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jirou/yaofubu/" title="腹部" target="_blank" style="color: rgb(0, 0, 0)">腹部</a></span>
+          </td>
+          <td valign="center" width="102"><a href="http://www.jianshen8.com/jirou/tuibu/223.html" target="_blank">仰卧举腿</a></td>
+          <td valign="center" width="43">3</td>
+          <td valign="center" width="51">15</td>
+        </tr>
+        <tr>
+          <td valign="center" width="90">哑铃坐姿弯举</td>
+          <td valign="center" width="45">3</td>
+          <td valign="center" width="52">12</td>
+          <td valign="center" width="102">
+            <span class="wp_keywordlink" style="margin: 0px; padding: 0px; border: 0px; background-color: transparent"><a href="http://www.jianshen8.com/jirou/yaofubu/1606.html" title="仰卧起坐的正确做法大全，减肥减掉小肚子！" target="_blank" style="color: rgb(0, 0, 0)">仰卧起坐</a></span>
+          </td>
+          <td valign="center" width="43">3</td>
+          <td valign="center" width="51">15</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="gifImg shoulder">
+      <img src="images/1.gif" alt="" />
+      <img src="images/2.gif" alt="" />
+      <img src="images/3.gif" alt="" />
+      <img src="images/4.gif" alt="" />
+      <img src="images/5.gif" alt="" />
+      <img src="images/6.gif" alt="" />
+    </div>
+    <div class="gifImg abdomen" style="display: none">
+      <img src="images/7.gif" alt="" />
+      <img src="images/8.gif" alt="" style="height: 280px" />
+      <img src="images/9.gif" alt="" />
+      <img src="images/11.gif" alt="" />
+      <img src="images/12.gif" alt="" />
+      <img src="images/14.gif" alt="" />
+      <img src="images/16.gif" alt="" />
+      <img src="images/18.gif" alt="" />
+      <img src="images/19.gif" alt="" />
+    </div>
+    <div class="gifImg chest" style="display: none">
+      <img src="images/20.gif" alt="" style="width: 200px" />
+      <img src="images/21.gif" alt="" />
+      <img src="images/22.gif" alt="" />
+      <img src="images/23.gif" alt="" />
+      <img src="images/24.gif" alt="" />
+      <img src="images/25.gif" alt="" />
+      <img src="images/26.gif" alt="" />
+    </div>
+    <div class="gifImg leg" style="display: none">
+      <img src="images/2.jpg" alt="" style="width: 200px" />
+      <img src="images/3.jpg" alt="" style="width: 200px" />
+      <img src="images/27.gif" alt="" style="width: 200px" />
+      <img src="images/28.gif" alt="" style="max-width: 500px" />
+      <img src="images/29.gif" alt="" style="max-width: 500px" />
+      <img src="images/30.gif" alt="" style="max-width: 500px" />
+      <img src="images/31.gif" alt="" style="max-width: 500px" />
+    </div>
+  </body>
+  <script>
+    bindEveryDay(["mon", "wed", "fri", "sun"]);
+    function bindEveryDay(day) {
+      for (let i = 0, l = day.length; i < l; i++) {
+        const someDay = document.querySelector("." + day[i]);
+        someDay.addEventListener("click", changeGif);
+      }
     }
-    function changeGif(e,day) {
-//        console.log(this.classList);
-        const name = day ||this.classList[1]
-        const gifImg = document.querySelectorAll(".gifImg");
-        const week = document.querySelectorAll(".week");
-        for (let i = 0, l = gifImg.length; i < l; i++) {
-            gifImg[i].style.display = "none";
-            week[i].style.background = "";
-        }
-        if (name == "mon") {
-            document.querySelector(".shoulder").style.display = "block";
-            document.querySelector(".mon").style.background = "hotpink";
-        } else if (name == "wed") {
-            document.querySelector(".abdomen").style.display = "block";
-            document.querySelector(".wed").style.background = "hotpink";
-
-        } else if (name == "fri") {
-            document.querySelector(".chest").style.display = "block";
-            document.querySelector(".fri").style.background = "hotpink";
-        }else if (name == "sun") {
-            document.querySelector(".leg").style.display = "block";
-            document.querySelector(".sun").style.background = "hotpink";
-        }
+    function changeGif(e, day) {
+      //        console.log(this.classList);
+      const name = day || this.classList[1];
+      const gifImg = document.querySelectorAll(".gifImg");
+      const week = document.querySelectorAll(".week");
+      for (let i = 0, l = gifImg.length; i < l; i++) {
+        gifImg[i].style.display = "none";
+        week[i].style.background = "";
+      }
+      if (name == "mon") {
+        document.querySelector(".shoulder").style.display = "block";
+        document.querySelector(".mon").style.background = "hotpink";
+      } else if (name == "wed") {
+        document.querySelector(".abdomen").style.display = "block";
+        document.querySelector(".wed").style.background = "hotpink";
+      } else if (name == "fri") {
+        document.querySelector(".chest").style.display = "block";
+        document.querySelector(".fri").style.background = "hotpink";
+      } else if (name == "sun") {
+        document.querySelector(".leg").style.display = "block";
+        document.querySelector(".sun").style.background = "hotpink";
+      }
     }
     //根据周几自动显示当天gif
     const date = new Date().getDay();
     if (date == 2 || date == 3) {
-        changeGif("","wed")
+      changeGif("", "wed");
     } else if (date == 4 || date == 5) {
-        changeGif("","fri")
-    }else if (date == 0 || date == 1) {
-        changeGif("","sun")
+      changeGif("", "fri");
+    } else if (date == 0 || date == 1) {
+      changeGif("", "sun");
     }
-</script>
+  </script>
 </html>
